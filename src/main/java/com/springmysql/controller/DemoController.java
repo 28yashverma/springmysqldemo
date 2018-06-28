@@ -24,9 +24,13 @@ public class DemoController {
 		return p;
 	}
 
+	@GetMapping("/")
+	public void saveUsers() {
+		demoRepo.saveAll(loadData());
+	}
+
 	@GetMapping("/list")
 	public List<Person> list() {
-		demoRepo.saveAll(loadData());
 		System.out.println("Retrieving data");
 		return demoRepo.findAll();
 	}
