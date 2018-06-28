@@ -7,7 +7,6 @@ script:
 - mvn test
 services:
 - mysql
-
 deploy:
   provider: cloudfoundry
   username: yashv1991@gmail.com
